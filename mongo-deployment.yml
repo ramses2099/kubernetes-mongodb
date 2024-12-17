@@ -35,7 +35,7 @@ spec:
             mountPath: /data/db
       volumes:
       - name: mongo-storage
-        persitentVolumeClaim:
+        persistentVolumeClaim:
           claimName: mongo-pvc      
 ---
 apiVersion: v1
