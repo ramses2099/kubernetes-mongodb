@@ -30,9 +30,9 @@ spec:
                 secretKeyRef:
                   name: mongodb-secret
                   key: mongo-root-password
-            volumenMounts:
-            - name: mongo-storage
-              mountPath: /data/db
+          volumeMounts:
+          - name: mongo-storage
+            mountPath: /data/db
       volumes:
       - name: mongo-storage
         persitentVolumeClaim:
@@ -51,4 +51,3 @@ spec:
       targetPort: 27017
       nodePort: 30070
   type: NodePort
-  
